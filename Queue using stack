@@ -1,0 +1,27 @@
+class Queue {
+    Stack<Integer> input = new Stack<Integer>();
+    Stack<Integer> output = new Stack<Integer>();
+
+    int dequeue() {
+        // code here
+       if(input.isEmpty( )&&output.isEmpty())
+       {
+           return -1;
+       }
+       if(output.isEmpty())
+       {
+           while(!input.isEmpty())
+           {
+               output.push(input.pop());
+            
+           }
+       }
+          return output.pop();
+    }
+
+    void enqueue(int x) {
+        input.add(x);
+        
+        
+    }
+}
