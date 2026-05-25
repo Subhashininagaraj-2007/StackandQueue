@@ -1,0 +1,7 @@
+class Solution{
+   static Stack<Integer> deleteMid(int n, Stack<Integer> st)
+   {
+       st.remove((n-1)/2);
+       return st; 
+    }   
+}
